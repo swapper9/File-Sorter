@@ -7,13 +7,13 @@ public class MainApp {
 
     private static int arraySize = 100_000;
     private static int[] unsorted = new int[arraySize];
-    private static int[][] chunkArray = new int[arraySize/1000][arraySize];
+    private static int[][] chunkArray = new int[arraySize/100][arraySize];
 
     public static void main(String[] args) {
 
         System.out.println("Reading source unsorted file");
         try(BufferedReader br = new BufferedReader(new FileReader("D:/tmp/tmprandom.dat"))) {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 1000; i++) {
                 unsorted = null;
                 unsorted = new int[arraySize];
                 for (int j = 0; j < arraySize; j++) {
